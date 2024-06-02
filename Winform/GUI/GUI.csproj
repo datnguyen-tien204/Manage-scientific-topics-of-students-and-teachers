@@ -1,0 +1,968 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{77490DE3-04CC-45ED-A0FC-AB841913FA5A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GUI</RootNamespace>
+    <AssemblyName>GUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>C:\Users\nguye\Downloads\Guna.UI-Framework-Lib-master\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom_config.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddBatch.Designer.cs">
+      <DependentUpon>frmAddBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCouncils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCouncils.Designer.cs">
+      <DependentUpon>frmAddCouncils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBatchXport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBatchXport.Designer.cs">
+      <DependentUpon>frmBatchXport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCouncilsXport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCouncilsXport.Designer.cs">
+      <DependentUpon>frmCouncilsXport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditAndNewDocument.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditAndNewDocument.Designer.cs">
+      <DependentUpon>frmEditAndNewDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditAssigment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditAssigment.Designer.cs">
+      <DependentUpon>frmEditAssigment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditBatch.Designer.cs">
+      <DependentUpon>frmEditBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditFunds.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditFunds.Designer.cs">
+      <DependentUpon>frmEditFunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoginWithFID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoginWithFID.Designer.cs">
+      <DependentUpon>frmLoginWithFID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageTopicDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageTopicDetail.Designer.cs">
+      <DependentUpon>frmManageTopicDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewAssignment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewAssignment.Designer.cs">
+      <DependentUpon>frmNewAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStudent_Teacher_TopicEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudent_Teacher_TopicEdit.Designer.cs">
+      <DependentUpon>frmStudent_Teacher_TopicEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTopicsXport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTopicsXport.Designer.cs">
+      <DependentUpon>frmTopicsXport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewTaiLieu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewTaiLieu.Designer.cs">
+      <DependentUpon>frmViewTaiLieu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmXportDocuments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmXportDocuments.Designer.cs">
+      <DependentUpon>frmXportDocuments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addANDeditStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addANDeditStudent.Designer.cs">
+      <DependentUpon>frm_addANDeditStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_addANDeditTeacher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_addANDeditTeacher.Designer.cs">
+      <DependentUpon>frm_addANDeditTeacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_CheckStatusProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_CheckStatusProject.Designer.cs">
+      <DependentUpon>frm_CheckStatusProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Management_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Management_Main.Designer.cs">
+      <DependentUpon>frm_Management_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_StudentXport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_StudentXport.Designer.cs">
+      <DependentUpon>frm_StudentXport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Student_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Student_Main.Designer.cs">
+      <DependentUpon>frm_Student_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Teacher_ExpReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Teacher_ExpReport.Designer.cs">
+      <DependentUpon>frm_Teacher_ExpReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Teacher_Students_TopicsRegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Teacher_Students_TopicsRegistrationForm.Designer.cs">
+      <DependentUpon>frm_Teacher_Students_TopicsRegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Custom_Topic_Designer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="phanCongXport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="phanCongXport.Designer.cs">
+      <DependentUpon>phanCongXport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherList.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TeacherList.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ucManage_Student_Teacher.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucManage_Student_Teacher.Designer.cs">
+      <DependentUpon>ucManage_Student_Teacher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_AllocatedFunds.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_AllocatedFunds.Designer.cs">
+      <DependentUpon>uc_AllocatedFunds.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_ChatWithAI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_ChatWithAI.Designer.cs">
+      <DependentUpon>uc_ChatWithAI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_CouncilManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_CouncilManagement.Designer.cs">
+      <DependentUpon>uc_CouncilManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_EnrollCondition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_EnrollCondition.Designer.cs">
+      <DependentUpon>uc_EnrollCondition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_FindScholar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_FindScholar.Designer.cs">
+      <DependentUpon>uc_FindScholar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_GradeTotal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_GradeTotal.Designer.cs">
+      <DependentUpon>uc_GradeTotal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Leader_Councils.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Leader_Councils.Designer.cs">
+      <DependentUpon>uc_Leader_Councils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_ManageMainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_ManageMainPage.Designer.cs">
+      <DependentUpon>uc_ManageMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="uc_Manage_Council.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Council.Designer.cs">
+      <DependentUpon>uc_Manage_Council.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Details_OpenEnroll.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Details_OpenEnroll.Designer.cs">
+      <DependentUpon>uc_Manage_Details_OpenEnroll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Documents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Documents.Designer.cs">
+      <DependentUpon>uc_Manage_Documents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Notification.Designer.cs">
+      <DependentUpon>uc_Manage_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Project.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Project.Designer.cs">
+      <DependentUpon>uc_Manage_Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Settings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Settings.Designer.cs">
+      <DependentUpon>uc_Manage_Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Student_Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Student_Notification.Designer.cs">
+      <DependentUpon>uc_Manage_Student_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Teacher_Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Teacher_Notification.Designer.cs">
+      <DependentUpon>uc_Manage_Teacher_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_Topic_Details.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_Topic_Details.Designer.cs">
+      <DependentUpon>uc_Manage_Topic_Details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Manage_User.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Manage_User.designer.cs">
+      <DependentUpon>uc_Manage_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_PhanCong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_PhanCong.Designer.cs">
+      <DependentUpon>uc_PhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_StudentsManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_StudentsManage.Designer.cs">
+      <DependentUpon>uc_StudentsManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Student_Teacher_CreateNewProject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Student_Teacher_CreateNewProject.Designer.cs">
+      <DependentUpon>uc_Student_Teacher_CreateNewProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Student_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Student_Dashboard.Designer.cs">
+      <DependentUpon>uc_Student_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Student_Teacher_FindDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Student_Teacher_FindDocument.Designer.cs">
+      <DependentUpon>uc_Student_Teacher_FindDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_TeacherAssignment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_TeacherAssignment.Designer.cs">
+      <DependentUpon>uc_TeacherAssignment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_TeacherStudentDocument.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_TeacherStudentDocument.Designer.cs">
+      <DependentUpon>uc_TeacherStudentDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_TeacherStudents_ManageProject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_TeacherStudents_ManageProject.Designer.cs">
+      <DependentUpon>uc_TeacherStudents_ManageProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Teacher_Assign_Notification.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Teacher_Assign_Notification.Designer.cs">
+      <DependentUpon>uc_Teacher_Assign_Notification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Teacher_GradeTopics.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Teacher_GradeTopics.Designer.cs">
+      <DependentUpon>uc_Teacher_GradeTopics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uc_Teacher_Manage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_Teacher_Manage.Designer.cs">
+      <DependentUpon>uc_Teacher_Manage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddBatch.resx">
+      <DependentUpon>frmAddBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCouncils.resx">
+      <DependentUpon>frmAddCouncils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBatchXport.resx">
+      <DependentUpon>frmBatchXport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCouncilsXport.resx">
+      <DependentUpon>frmCouncilsXport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditAndNewDocument.resx">
+      <DependentUpon>frmEditAndNewDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditAssigment.resx">
+      <DependentUpon>frmEditAssigment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditBatch.resx">
+      <DependentUpon>frmEditBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditFunds.resx">
+      <DependentUpon>frmEditFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoginWithFID.resx">
+      <DependentUpon>frmLoginWithFID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageTopicDetail.resx">
+      <DependentUpon>frmManageTopicDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewAssignment.resx">
+      <DependentUpon>frmNewAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudent_Teacher_TopicEdit.resx">
+      <DependentUpon>frmStudent_Teacher_TopicEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTopicsXport.resx">
+      <DependentUpon>frmTopicsXport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewTaiLieu.resx">
+      <DependentUpon>frmViewTaiLieu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmXportDocuments.resx">
+      <DependentUpon>frmXportDocuments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_addANDeditStudent.resx">
+      <DependentUpon>frm_addANDeditStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_addANDeditTeacher.resx">
+      <DependentUpon>frm_addANDeditTeacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_CheckStatusProject.resx">
+      <DependentUpon>frm_CheckStatusProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Management_Main.resx">
+      <DependentUpon>frm_Management_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_StudentXport.resx">
+      <DependentUpon>frm_StudentXport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Student_Main.resx">
+      <DependentUpon>frm_Student_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Teacher_ExpReport.resx">
+      <DependentUpon>frm_Teacher_ExpReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Teacher_Students_TopicsRegistrationForm.resx">
+      <DependentUpon>frm_Teacher_Students_TopicsRegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="phanCongXport.resx">
+      <DependentUpon>phanCongXport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="rptDocuments.rdlc" />
+    <EmbeddedResource Include="studentList.rdlc" />
+    <EmbeddedResource Include="teacherList_report.rdlc" />
+    <EmbeddedResource Include="topicsReport.rdlc" />
+    <EmbeddedResource Include="ucManage_Student_Teacher.resx">
+      <DependentUpon>ucManage_Student_Teacher.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_AllocatedFunds.resx">
+      <DependentUpon>uc_AllocatedFunds.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_ChatWithAI.resx">
+      <DependentUpon>uc_ChatWithAI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_CouncilManagement.resx">
+      <DependentUpon>uc_CouncilManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_EnrollCondition.resx">
+      <DependentUpon>uc_EnrollCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_FindScholar.resx">
+      <DependentUpon>uc_FindScholar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_GradeTotal.resx">
+      <DependentUpon>uc_GradeTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Leader_Councils.resx">
+      <DependentUpon>uc_Leader_Councils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_ManageMainPage.resx">
+      <DependentUpon>uc_ManageMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Council.resx">
+      <DependentUpon>uc_Manage_Council.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Details_OpenEnroll.resx">
+      <DependentUpon>uc_Manage_Details_OpenEnroll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Documents.resx">
+      <DependentUpon>uc_Manage_Documents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Notification.resx">
+      <DependentUpon>uc_Manage_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Project.resx">
+      <DependentUpon>uc_Manage_Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Settings.resx">
+      <DependentUpon>uc_Manage_Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Student_Notification.resx">
+      <DependentUpon>uc_Manage_Student_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Teacher_Notification.resx">
+      <DependentUpon>uc_Manage_Teacher_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_Topic_Details.resx">
+      <DependentUpon>uc_Manage_Topic_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Manage_User.resx">
+      <DependentUpon>uc_Manage_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_PhanCong.resx">
+      <DependentUpon>uc_PhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_StudentsManage.resx">
+      <DependentUpon>uc_StudentsManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Student_Teacher_CreateNewProject.resx">
+      <DependentUpon>uc_Student_Teacher_CreateNewProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Student_Dashboard.resx">
+      <DependentUpon>uc_Student_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Student_Teacher_FindDocument.resx">
+      <DependentUpon>uc_Student_Teacher_FindDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_TeacherAssignment.resx">
+      <DependentUpon>uc_TeacherAssignment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_TeacherStudentDocument.resx">
+      <DependentUpon>uc_TeacherStudentDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_TeacherStudents_ManageProject.resx">
+      <DependentUpon>uc_TeacherStudents_ManageProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Teacher_Assign_Notification.resx">
+      <DependentUpon>uc_Teacher_Assign_Notification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Teacher_GradeTopics.resx">
+      <DependentUpon>uc_Teacher_GradeTopics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_Teacher_Manage.resx">
+      <DependentUpon>uc_Teacher_Manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\Roboto-Black.ttf" />
+    <None Include="Resources\Roboto-BlackItalic.ttf" />
+    <None Include="Resources\Roboto-Bold.ttf" />
+    <None Include="Resources\Roboto-BoldItalic.ttf" />
+    <None Include="Resources\Roboto-Italic.ttf" />
+    <None Include="Resources\Roboto-Light.ttf" />
+    <None Include="Resources\Roboto-LightItalic.ttf" />
+    <None Include="Resources\Roboto-Medium.ttf" />
+    <None Include="Resources\Roboto-MediumItalic.ttf" />
+    <None Include="Resources\Roboto-Regular.ttf" />
+    <None Include="Resources\Roboto-Thin.ttf" />
+    <None Include="Resources\Roboto-ThinItalic.ttf" />
+    <None Include="TeacherList.xsc">
+      <DependentUpon>TeacherList.xsd</DependentUpon>
+    </None>
+    <None Include="TeacherList.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TeacherList.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TeacherList.xss">
+      <DependentUpon>TeacherList.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{a5956fd8-873e-4727-96c2-478762cfdf69}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{b7f79f3e-b3df-4a87-9939-430b9836e2d4}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gradient-background-7680x4320-11027.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-password-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hide-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-hide-96 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-eye-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White And Black Modern Abstract Beauty Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\White And Black Modern Abstract Beauty Logo %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-100 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-addition-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-layout-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-project-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-project-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-layout-48 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-setting-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-prize-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-statistic-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-parliament-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-document-100 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-users-settings-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-project-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-layout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-setting-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-prize-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-statistic-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-100 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-parliament-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-document-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-users-settings-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-100 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cloud-download-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cloud-download-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-filter-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-filter-1001.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-edit-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-share-60.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\54fd68724782ebdcb2936.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\411c7f935063fc3da5724.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\175628d90729ab77f2385.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fc4ac5c5ea35466b1f241.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-more-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-student-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-teacher-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-add-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-group-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-assignment-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-assignment-50 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-assignment-50 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-assignment-50 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-100 %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-50 %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not5+.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\not0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-grade-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220b297908a2a9fcf0b3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\220b297908a2a9fcf0b3-modified.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-find-50.png" />
+    <None Include="Resources\icons8-google-scholar-50.png" />
+    <None Include="Resources\icons8-ai-50.png" />
+    <None Include="Resources\icons8-find-50 %281%29.png" />
+    <None Include="Resources\icons8-tune-60.png" />
+    <None Include="Resources\icons8-back-50.png" />
+    <None Include="Resources\icons8-reload-50.png" />
+    <None Include="Resources\icons8-file-50.png" />
+    <None Include="Resources\icons8-send-60.png" />
+    <None Include="Resources\icons8-instagram-96.png" />
+    <None Include="Resources\icons8-telegram-app-96.png" />
+    <None Include="Resources\Icon_of_Zalo.svg.png" />
+    <None Include="Resources\icons8-facebook-96.png" />
+    <None Include="Resources\icons8-github-96.png" />
+    <None Include="Resources\icons8-github-961.png" />
+    <None Include="Resources\Icon_of_Zalo.svg1.png" />
+    <None Include="Resources\icons8-facebook-961.png" />
+    <None Include="Resources\icons8-hugging-face-96.png" />
+    <None Include="Resources\icons8-weibo-96.png" />
+    <None Include="Resources\icons8-xiaohongshu-100.png" />
+    <None Include="Resources\Screenshot 2024-05-19 163245.png" />
+    <None Include="Resources\f05e3d4eace984bcfd432c5afe602409.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CircularProgressBar">
+      <Version>2.8.0.16</Version>
+    </PackageReference>
+    <PackageReference Include="Emgu.CV.Bitmap">
+      <Version>4.9.0.5494</Version>
+    </PackageReference>
+    <PackageReference Include="Emgu.CV.runtime.windows">
+      <Version>4.9.0.5494</Version>
+    </PackageReference>
+    <PackageReference Include="Guna.Charts.WinForms">
+      <Version>1.0.8</Version>
+    </PackageReference>
+    <PackageReference Include="Guna.UI2.WinForms">
+      <Version>2.0.4.4</Version>
+    </PackageReference>
+    <PackageReference Include="LinqForEEPlus">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.WebForms">
+      <Version>150.1358.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.ReportingServices.ReportViewerControl.Winforms">
+      <Version>150.1620.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Web.WebView2">
+      <Version>1.0.2478.35</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Spire.PDFViewer">
+      <Version>7.10.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
